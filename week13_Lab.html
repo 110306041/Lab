@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<script>
+	function calc(form) {
+
+		var D = "0";
+		var A = document.getElementById("num1").value;
+
+		var B = document.getElementById("num2").value;
+		var C = document.getElementById("op").value;
+		if (C === "+")
+		{
+			D = parseInt(A)+parseInt(B); 
+		}
+		else if(C === "-")
+		{
+			D = parseInt(A)-parseInt(B);
+		}
+		else if(C === "*")
+		{
+			D = parseInt(A)*parseInt(B);
+		}
+		else if (C === "/")
+		{
+			D = parseInt(A)/parseInt(B);
+		}
+		document.getElementById("result").innerHTML = D;
+		return false;
+	}
+</script>
+<body>
+	
+	
+	<div style="width: 300px;margin: 0 auto;background-color: bisque; border-style: double;" align="center">
+
+	
+
+		<p style="font-style: oblique;font-size: larger;">JS Calculator</b>
+
+
+
+			<p> Number 1</p>
+		
+				<input type="text" id="num1" name="num1" style="width:280px;" />
+
+			<p> Number 2</p>
+			
+				<input type="text" id="num2" name="num2" style="width:280px" />
+
+			
+			<p> Operate way?</p>
+			<select id="op" style="width:280px; height:80px;">
+				<option>+</option>
+				<option>-</option>
+				<option>*</option>
+				<option>/</option>
+			</select>
+
+		</br></br>
+
+
+		<input type="button" value="Add" name="button" onClick="calc(this)" style="width:280px;height:25px; background-color: burlywood;">
+	</br></br>
+	Result =
+
+	<p id="result" name="r1" ></p>
+	
+</div>
+
+
+
+
+</body>
+</html>
